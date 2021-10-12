@@ -6,8 +6,6 @@ page = requests.get("https://fr.wikipedia.org/wiki/Boa")
 
 soup = bs(page.content, "html5lib")
 
-output = ''
-
 blacklist = [
     '[document]',
     'noscript',
