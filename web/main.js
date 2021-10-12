@@ -1,20 +1,11 @@
-// Initialize button with user's preferred color
-let changeColor = document.getElementById("changeColor");
+var button = document.getElementById("extension-button");
+button.addEventListener("click", (function () {
 
-// When the button is clicked, inject setPageBackgroundColor into current page
-changeColor.addEventListener("click", async () => {
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    var textButton = document.getElementById("text-extension-button");
+    if (!button.checked && confirm( "Êtes-vous sûr(e) de vouloir désactiver l'extension ?" ) ) {
+        // Code à éxécuter si le l'utilisateur clique sur "OK"
+        textButton.innerText = "Activer l'extension";
+    }
+    else if(button.checked) textButton.innerText = "Désactiver l'extension";
 
-    chrome.scripting.executeScript({
-        target: { tabId: tab.id },
-        function: setPageBackgroundColor,
-    });
-});
-
-// The body of this function will be executed as a content script inside the
-// current page
-function setPageBackgroundColor() {
-    chrome.storage.sync.get("color", ({ color }) => {
-        document.body.style.backgroundColor = color;
-    });
-}
+}));
