@@ -1,46 +1,48 @@
-let page = document.getElementById("buttonDiv");
-let selectedClassName = "current";
-const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"];
 
-// Reacts to a button click by marking the selected button and saving
-// the selection
-function handleButtonClick(event) {
-    // Remove styling from the previously selected color
-    let current = event.target.parentElement.querySelector(
-        `.${selectedClassName}`
-    );
-    if (current && current !== event.target) {
-        current.classList.remove(selectedClassName);
-    }
-
-    // Mark the button as selected
-    let color = event.target.dataset.color;
-    event.target.classList.add(selectedClassName);
-    chrome.storage.sync.set({ color });
-}
-
-// Add a button to the page for each supplied color
-function constructOptions(buttonColors) {
-    chrome.storage.sync.get("color", (data) => {
-        let currentColor = data.color;
-        // For each color we were provided…
-        for (let buttonColor of buttonColors) {
-            // …create a button with that color…
-            let button = document.createElement("button");
-            button.dataset.color = buttonColor;
-            button.style.backgroundColor = buttonColor;
-
-            // …mark the currently selected color…
-            if (buttonColor === currentColor) {
-                button.classList.add(selectedClassName);
-            }
-
-            // …and register a listener for when that button is clicked
-            button.addEventListener("click", handleButtonClick);
-            page.appendChild(button);
-        }
+// ### Window load event ###
+window.addEventListener("load", function () {
+    // Get state of the extension switch
+    chrome.storage.sync.get('extensionButton', function(data) {
+        document.querySelector("#extensionButton").checked = data.extensionButton
+        // Set the text of the extension button
+        let extensionButtonText = document.getElementById("extensionButtonText");
+        if(data.extensionButton) extensionButtonText.innerText = "Désactiver l'extension";
+        else extensionButtonText.innerText = "Activer l'extension";
     });
-}
 
-// Initialize the page by constructing the color options
-constructOptions(presetButtonColors);
+    // Set state of the arachnophobia checkbox
+    chrome.storage.sync.get('araCheckbox', function(data) {
+        document.querySelector("#araCheckbox").checked = data.araCheckbox
+    });
+
+    // Set state of the reptile phobia checkbox
+    chrome.storage.sync.get('reptCheckbox', function(data) {
+        document.querySelector("#reptCheckbox").checked = data.reptCheckbox
+    });
+});
+
+// ### Extension switch on click event ###
+var extensionButton = document.getElementById("extensionButton");
+extensionButton.addEventListener("click", function () {
+    // Confirm if you want to desactivate the extension
+    let extensionButtonText = document.getElementById("extensionButtonText");
+    if (!extensionButton.checked && confirm( "Êtes-vous sûr(e) de vouloir désactiver l'extension ?" ) ) {
+        // Code à éxécuter si le l'utilisateur clique sur "OK"
+        extensionButtonText.innerText = "Activer l'extension";
+    }
+    else if(extensionButton.checked) extensionButtonText.innerText = "Désactiver l'extension";
+    // Save the state of the switch
+    chrome.storage.sync.set({
+        extensionButton: document.querySelector("#extensionButton").checked
+    });
+});
+
+// ### Save button on click event ###
+var saveButton = document.getElementById("saveButton");
+saveButton.addEventListener("click", function () {
+    // Save the states of the phobia checkbox
+    chrome.storage.sync.set({
+        araCheckbox: document.querySelector('#araCheckbox').checked,
+        reptCheckbox: document.querySelector('#reptCheckbox').checked
+    });
+});

@@ -14,7 +14,6 @@
                     Anti-Phobie Options
                 </div>
                 <div class="card-body">
-                    <form>
                     <ul class="dropdown-menu dropdown-menu-form">
                         <li><label class="checkbox"><input type="checkbox" onchange="some()">One</label></li>
                         <li><label class="checkbox"><input type="checkbox" onchange="some()">Two</label></li>
@@ -22,23 +21,19 @@
                     <h5 class="card-title">Paramètres : </h5>
                     <div class="mt-2 mb-2 card">
                         <div class="form-check form-switch text-center card-body">
-                            <input class="form-check-input ms-1" type="checkbox" id="extension-button" checked>
-                            <label class="form-check-label" for="extension-button"><span id="text-extension-button">Désactiver l'extension</span></label>
+                            <input class="form-check-input ms-1" type="checkbox" id="extensionButton">
+                            <label class="form-check-label" for="extensionButton"><span id="extensionButtonText"></span></label>
                         </div>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><h5>Types de phobies a traiter :</h5>
                             <div class="form-check ms-5">
-                                <input class="form-check-input" type="checkbox" value="" id="ar-phobia">
-                                <label class="form-check-label" for="ar-phobia">Arachnophobie (peur des araignées)</label>
+                                <input class="form-check-input" type="checkbox" value="" id="araCheckbox">
+                                <label class="form-check-label" for="araCheckbox">Arachnophobie (peur des araignées)</label>
                             </div>
                             <div class="form-check ms-5">
-                                <input class="form-check-input" type="checkbox" value="" id="rept-phobia">
-                                <label class="form-check-label" for="rept-phobia">Herpétophobie (peur des reptiles)</label>
-                            </div>
-                            <div class="form-check ms-5">
-                                <input class="form-check-input" type="checkbox" value="" id="clo-phobia">
-                                <label class="form-check-label" for="clo-phobia">Coulrophobie (peur des clowns)</label>
+                                <input class="form-check-input" type="checkbox" value="" id="reptCheckbox">
+                                <label class="form-check-label" for="reptCheckbox">Herpétophobie (peur des reptiles)</label>
                             </div>
                         </li>
                     </ul>
@@ -52,9 +47,8 @@
                     </ul>
 
                     <div class="container text-center mt-5 mb-2">
-                        <button class="btn btn-success align-content-center" type="submit">Enregistrer</button>
+                        <button id="saveButton" class="btn btn-success align-content-center">Enregistrer</button>
                     </div>
-                    </form>
                 </div>
             </div>
         </div>

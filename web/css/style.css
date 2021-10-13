@@ -28,3 +28,8 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+#settingText {
+    font-family: Montserrat-Light;
+    font-size: 14px;
+}
