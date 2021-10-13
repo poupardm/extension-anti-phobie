@@ -1,5 +1,7 @@
-title = chrome.i18n.getMessage("extName");
+// Load text from locale files
+document.title = chrome.i18n.getMessage("extName");
 document.querySelector("#popupTitle").innerHTML = chrome.i18n.getMessage("extName");
+document.querySelector("#settingText").innerHTML = chrome.i18n.getMessage("settings");
 
 // ### Window load event ###
 window.addEventListener("load", function () {
@@ -8,8 +10,8 @@ window.addEventListener("load", function () {
         document.querySelector("#extensionButton").checked = data.extensionButton
         // Set the text of the extension button
         let extensionButtonText = document.getElementById("extensionButtonText");
-        if(data.extensionButton) extensionButtonText.innerText = "Désactiver l'extension";
-        else extensionButtonText.innerText = "Activer l'extension";
+        if(data.extensionButton) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
+        else extensionButtonText.innerText = chrome.i18n.getMessage("enableExtText");
     });
 });
 
@@ -18,11 +20,11 @@ var extensionButton = document.getElementById("extensionButton");
 extensionButton.addEventListener("click", function () {
     // Confirm if you want to desactivate the extension
     let extensionButtonText = document.getElementById("extensionButtonText");
-    if (!extensionButton.checked && confirm( "Êtes-vous sûr(e) de vouloir désactiver l'extension ?" ) ) {
+    if (!extensionButton.checked && confirm( chrome.i18n.getMessage("disableExtQuestion") ) ) {
         // Code à éxécuter si le l'utilisateur clique sur "OK"
-        extensionButtonText.innerText = "Activer l'extension";
+        extensionButtonText.innerText = chrome.i18n.getMessage("enableExtText");
     }
-    else if(extensionButton.checked) extensionButtonText.innerText = "Désactiver l'extension";
+    else if(extensionButton.checked) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
     // Save the state of the switch
     chrome.storage.sync.set({
         extensionButton: document.querySelector("#extensionButton").checked
