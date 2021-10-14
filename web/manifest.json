@@ -5,9 +5,9 @@
   "default_locale": "en",
   "manifest_version": 3,
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
   },
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": ["tabs","storage", "activeTab", "scripting","webNavigation" ],
   "action": {
     "default_popup": "index.html",
     "default_icon": {
