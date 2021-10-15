@@ -41,7 +41,7 @@ def hello():
                 if alt != "" and alt != None and src != None and src != "":
                     print(src)
                     # Ouvre le dictionnaire de données
-                    with open('C:/Users/mathe/Desktop/Projet/extension-anti-phobie/local/dico_'+ phobie +'.json') as json_file:
+                    with open('dico_'+ phobie +'.json') as json_file:
                         data = json.load(json_file)
                         for language in data:
                             for mot in data[language]:
