@@ -1,0 +1,37 @@
+{
+  "extName": {
+    "message": "Anti-Phobia",
+    "description": "Name of the extension"
+  },
+  "extDesc": {
+    "message": "Blur the images of your worst phobias!",
+    "description": "Description of the extension"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "save": {
+    "message": "Save"
+  },
+  "disableExtText": {
+    "message": "Disable extension"
+  },
+  "enableExtText": {
+    "message": "Enable extension"
+  },
+  "disableExtQuestion": {
+    "message": "Are you sure you want to deactivate the extension?"
+  },
+  "optionPageTitle": {
+    "message": "Anti-Phobia Options"
+  },
+  "typeOfPhobiaText": {
+    "message": "Types of phobias to treat"
+  },
+  "araText": {
+    "message": "Arachnophobia (fear of spiders)"
+  },
+  "reptText": {
+    "message": "Herpetophobia (fear of reptiles)"
+  }
+}

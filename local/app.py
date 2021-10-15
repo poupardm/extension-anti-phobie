@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
 from bs4 import BeautifulSoup as bs
+from flask import Flask
+from flask_cors import CORS
 import requests
 import json
 
@@ -15,6 +17,7 @@ blacklist = [
 ]
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route("/api/phobie")
@@ -38,7 +41,7 @@ def hello():
                 if alt != "" and alt != None and src != None and src != "":
                     print(src)
                     # Ouvre le dictionnaire de données
-                    with open('dico_'+phobie+'.json') as json_file:
+                    with open('C:/Users/mathe/Desktop/Projet/extension-anti-phobie/local/dico_'+ phobie +'.json') as json_file:
                         data = json.load(json_file)
                         for language in data:
                             for mot in data[language]:
