@@ -57,8 +57,8 @@ def hello():
                     while(ok == False and avant != None):
                         for t in avant.find_all(text=True):
                             # Si le text est non-vide
-                            if src != None and t != "/n" and len(t) != 0 and t.parent.name not in blacklist:
-                                with open('C:/Users/mathe/Desktop/Projet/extension-anti-phobie/local/dico_'+ phobie +'.json') as json_file:
+                            if src != None and t != "\n" and len(t) != 0 and t.parent.name not in blacklist:
+                                with open('dico_'+phobie+'.json') as json_file:
                                     mydata = json.load(json_file)
                                     for langue in mydata: #Pour chaque langue 
                                         for word in mydata[langue]: # Compare les mots du dictionnaire avec le texte de la page
