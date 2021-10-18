@@ -13,7 +13,30 @@ window.addEventListener("load", function () {
         if(data.extensionButton) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
         else extensionButtonText.innerText = chrome.i18n.getMessage("enableExtText");
     });
+
+    wtButtonText.innerText = chrome.i18n.getMessage("wtAddText");
 });
+
+function isWhitelisted(url) {
+    // Get state of the extension switch
+    chrome.storage.sync.get('url', function(data) {
+
+    });
+}
+
+function addWhitelist() {
+    console.log("test");
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.storage.sync.set({
+            url: activeTab.url
+        });
+
+        chrome.storage.sync.get('url', function(data) {
+            console.log(data);
+        });
+    });
+
+}
 
 // ### Extension switch on click event ###
 var extensionButton = document.getElementById("extensionButton");

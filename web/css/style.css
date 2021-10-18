@@ -29,7 +29,7 @@ body {
     margin-bottom: 10px;
 }
 
-#settingText {
+#settingText, #wtButtonText{
     font-family: Montserrat-Light;
     font-size: 14px;
 }

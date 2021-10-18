@@ -18,14 +18,90 @@
 @font-face { font-family: 'Montserrat-Thin';src: url("../fonts/Montserrat-Thin.ttf");}
 @font-face { font-family: 'Montserrat-ThinItalic';src: url("../fonts/Montserrat-ThinItalic.ttf");}
 
-
-#text-header {
-    font-family: Montserrat-SemiBold;
-    font-size: 18px;
+body {
+    background-color: #f3f3f3;
+    width: 100%;
+    height: 100%;
 }
-#main {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px ;
-    width: 40%;
+
+.main {
+    padding-top: 20px ;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+.content {
+    background-color: white;
+    border: 1px solid #9d9d9d;
+    height: 100%;
+}
+
+.content-title {
+    text-align: center;
+    padding: 40px 0 10px 0;
+    font-size: 24px;
+    color: #2c2c2c;
+    font-family: Montserrat-Light;
+}
+
+.content-description {
+    margin: 0 20px 0 20px;
+    text-align: center;
+    color: #5b5b5b;
+    font-size: 14px;
+    font-family: Montserrat-Regular;
+}
+
+#typeOfPhobiaText {
+    text-transform: uppercase;
+    font-family: Montserrat-Bold;
+    color: #4b4b4b;
+    font-size: 16px;
+}
+#whitelistDropdown {
+    color: #626262;
+}
+.hideTab {
+    display: none;
+}
+
+.sidebar {
+    width: 60%;
+}
+
+.sidebar-logo {
+    padding: 30px 20px 30px 20px;
+    font-family: Montserrat-Bold;
+}
+
+.sidebar-navigation {
+    width: 100%;
+}
+
+.sidebar-navigation .header {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    color: #727272;
+    font-family: Montserrat-Light;
+}
+
+
+.sidebar-navigation li {
+    padding: 20px 20px 20px 20px;
+    list-style:none;
+    background-color: #f3f3f3;
+}
+
+.sidebar-navigation .active {
+    border-top: 1px solid #9d9d9d;
+    border-bottom: 1px solid #9d9d9d;
+    border-left: 1px solid #9d9d9d;
+    border-right: 1px solid #ffffff;
+    background-color: #ffffff;
+}
+
+.sidebar-navigation li a {
+    text-decoration: none;
+    color: black;
 }
