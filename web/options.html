@@ -18,17 +18,24 @@
                     </div>
                     <ul class="sidebar-navigation">
                         <li class="header">Paramètres</li>
-                        <li id="general-link" class="active">
-                            <a href="#"><i class="fa fa-home pe-2" aria-hidden="true"></i> Général</a>
-                        </li>
-                        <li id="whitelist-link">
-                            <a href="#whitelist"><i class="fa fa-tachometer pe-2" aria-hidden="true"></i> Liste Blanche</a>
-                        </li>
-                        <li id="blacklist-link">
-                            <a href="#blacklist"><i class="fa fa-tachometer pe-2" aria-hidden="true"></i> Liste Noire</a>
-                        </li>
+                        <a href="#">
+                            <li id="general-link" class="active">
+                                <i class="fa fa-home pe-2" aria-hidden="true"></i> Général
+                            </li>
+                        </a>
+                        <a href="#whitelist">
+                            <li id="whitelist-link">
+                                <i class="fa fa-tachometer pe-2" aria-hidden="true"></i> Liste Blanche
+                            </li>
+                        </a>
+                        <a href="#blacklist">
+                            <li id="blacklist-link">
+                                <i class="fa fa-tachometer pe-2" aria-hidden="true"></i> Liste Noire
+                            </li>
+                        </a>
                     </ul>
                 </div>
+                <!-- Settings Tab -->
                 <div class="content tab-general col-9">
                     <h5 class="content-title">Paramètres Généraux</h5>
                     <hr class="mt-4 mb-5 m-3">
@@ -39,100 +46,103 @@
                         </div>
                     </div>
                     <hr class="mt-5 mb-4 m-3">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item li-title d-flex flex-row mt-3">
-                            <div class="col-3">
-                                <span id="typeOfPhobiaText"></span> :
-                            </div>
-                            <div class="col-9 justify-content-center">
-                                <div class="form-check ms-5 typeOfPhobiaCb">
-                                    <input class="form-check-input" type="checkbox" value="" id="araCheckbox">
-                                    <label class="form-check-label" for="araCheckbox"><span id="araText"></span></label>
+                    <form class="row col-12" method="POST">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item ms-4 li-title d-flex flex-row mt-3">
+                                <div class="col-3">
+                                    <span id="typeOfPhobiaText"></span> :
                                 </div>
-                                <div class="form-check ms-5 typeOfPhobiaCb">
-                                    <input class="form-check-input" type="checkbox" value="" id="reptCheckbox">
-                                    <label class="form-check-label" for="reptCheckbox"><span id="reptText"></span></label>
+                                <div class="col-9 justify-content-center">
+                                    <div class="form-check ms-5 typeOfPhobiaCb">
+                                        <input class="form-check-input" type="checkbox" value="" id="araCheckbox">
+                                        <label class="form-check-label" for="araCheckbox"><span id="araText"></span></label>
+                                    </div>
+                                    <div class="form-check ms-5 typeOfPhobiaCb">
+                                        <input class="form-check-input" type="checkbox" value="" id="reptCheckbox">
+                                        <label class="form-check-label" for="reptCheckbox"><span id="reptText"></span></label>
+                                    </div>
+                                    <div class="form-check ms-5 typeOfPhobiaCb">
+                                        <input class="form-check-input" type="checkbox" value="" id="clownCheckbox">
+                                        <label class="form-check-label" for="clownCheckbox">Clown</label>
+                                    </div>
                                 </div>
-                                <div class="form-check ms-5 typeOfPhobiaCb">
-                                    <input class="form-check-input" type="checkbox" value="" id="clownCheckbox">
-                                    <label class="form-check-label" for="clownCheckbox">Clown</label>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <hr class="mt-5 mb-4 m-3">
-                    <div class="text-center">
-                        <button id="saveButton" class="btn btn-success mt-5"><span id="saveButtonText"></span></button>
-                    </div>
+                            </li>
+                        </ul>
+                        <hr class="mt-5 mb-4 m-3">
+                        <div class="text-center">
+                            <button id="saveButton" class="btn btn-success mt-5"><span id="saveButtonText"></span></button>
+                        </div>
+                    </form>
                 </div>
+                <!-- Whitelist Tab -->
                 <div class="content tab-whitelist col-9">
                     <h5 class="content-title">Liste Blanche</h5>
                     <p class="content-description">L'ajout de sites web dans la liste blanche permet d'autoriser le chargement des images sans traitement anti-phobie</p>
-                    <hr class="mt-4 mb-5 m-3">
+                    <hr class="mt-5 mb-5 m-3">
                     <div class="container">
                         <div class="input-group mb-3">
-                            <form class="row col-12">
+                            <form class="row col-12" method="POST">
                                 <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="Par exemple : www.exemple.fr" pattern="[Hh][Tt][Tt][Pp][Ss]?:\/\/(?:(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]+-?)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))(?::\d{2,5})?(?:\/[^\s]*)?" id="input-whitelist">
+                                    <input type="text" class="form-control" placeholder="Par exemple : www.exemple.fr"
+                                           pattern="([w]{3})+\.+[a-z0-9.-]+\.+[a-z]{2,}$"
+                                           title="Le site web doit être sous forme 'www.exemple.fr'"
+                                           id="input-whitelist">
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-outline-success mb-3">Ajouter un site web</button>
+                                    <button type="submit" class="btn btn-outline-success mb-3" id="addButtonWhitelist" >Ajouter un site web</button>
                                 </div>
                             </form>
 
                         </div>
                         <div class="input-group mb-3">
-                            <select class="form-select" id="whitelistDropdown">
-                                <option value="0" selected>Choisissez un site...</option>
-                                <option value="1">www.google.fr</option>
-                                <option value="2">www.google.com</option>
-                                <option value="3">www.wikipedia.org</option>
-                            </select>
-                            <div class="input-group-prepend">
-                                <button class="btn btn-outline-danger ms-2" id="removeButtonWhitelist" type="button">Supprimer un site web</button>
-                            </div>
+                            <form class="row col-12" method="POST">
+                                <div class="col-8">
+                                    <select class="form-select" id="whitelistDropdown">
+                                        <option value="0" selected>Choisissez un site...</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-outline-danger mb-3" id="removeButtonWhitelist" >Supprimer un site web</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <hr class="mt-5 mb-5 m-3">
-                    <div class="text-center">
-                        <button id="saveWhitelistButton" class="btn btn-outline-success mt-5">Enregistrer</button>
-                    </div>
                 </div>
+                <!-- Blacklist Tab -->
                 <div class="content tab-blacklist col-9">
-                    <h5 class="content-title">Paramètres Généraux</h5>
-                    <hr class="mt-4 mb-5 m-3">
-                    <div class="ms-4 me-4 card">
-                        <div class="form-check form-switch text-center card-body">
-                            <input class="form-check-input ms-1" type="checkbox" id="extensionButton">
-                            <label class="form-check-label" for="extensionButton"><span id="extensionButtonText"></span></label>
+                    <h5 class="content-title">Liste Noire</h5>
+                    <p class="content-description">L'ajout de sites web dans la liste noire permet d'interdir le chargement des images contenant la/les phobie(s) parametrée(s)</p>
+                    <hr class="mt-5 mb-5 m-3">
+                    <div class="container">
+                        <div class="input-group mb-3">
+                            <form class="row col-12" method="POST">
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="Par exemple : www.exemple.fr"
+                                           pattern="([w]{3})+\.+[a-z0-9.-]+\.+[a-z]{2,}$"
+                                           title="Le site web doit être sous forme 'www.exemple.fr'"
+                                           id="input-blacklist">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-outline-success mb-3" id="addButtonBlackList" >Ajouter un site web</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="input-group mb-3">
+                            <form class="row col-12" method="POST">
+                                <div class="col-8">
+                                    <select class="form-select" id="blacklistDropdown">
+                                        <option value="0" selected>Choisissez un site...</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-outline-danger mb-3" id="removeButtonBlackList" >Supprimer un site web</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <hr class="mt-5 mb-4 m-3">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item li-title d-flex flex-row mt-3">
-                            <div class="col-3">
-                                <span id="typeOfPhobiaText"></span> :
-                            </div>
-                            <div class="col-9 justify-content-center">
-                                <div class="form-check ms-5 typeOfPhobiaCb">
-                                    <input class="form-check-input" type="checkbox" value="" id="araCheckbox">
-                                    <label class="form-check-label" for="araCheckbox"><span id="araText"></span></label>
-                                </div>
-                                <div class="form-check ms-5 typeOfPhobiaCb">
-                                    <input class="form-check-input" type="checkbox" value="" id="reptCheckbox">
-                                    <label class="form-check-label" for="reptCheckbox"><span id="reptText"></span></label>
-                                </div>
-                                <div class="form-check ms-5 typeOfPhobiaCb">
-                                    <input class="form-check-input" type="checkbox" value="" id="clownCheckbox">
-                                    <label class="form-check-label" for="clownCheckbox">Clown</label>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <hr class="mt-5 mb-4 m-3">
-                    <div class="text-center">
-                        <button id="saveButton" class="btn btn-success mt-5"><span id="saveButtonText"></span></button>
-                    </div>
+                    <hr class="mt-5 mb-5 m-3">
                 </div>
             </div>
         </div>
