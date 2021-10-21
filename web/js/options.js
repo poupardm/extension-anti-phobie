@@ -95,11 +95,11 @@ function loadSelectedMenu(locationHash) {
             document.querySelector("#reptText").innerHTML = chrome.i18n.getMessage("reptText");
 
             // Get state of the extension switch
-            chrome.storage.sync.get('extensionButton', function(data) {
-                document.querySelector("#extensionButton").checked = data.extensionButton
+            chrome.storage.sync.get('enable', function(data) {
+                document.querySelector("#extensionButton").checked = data.enable
                 // Set the text of the extension button
                 let extensionButtonText = document.getElementById("extensionButtonText");
-                if(data.extensionButton) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
+                if(data.enable) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
                 else extensionButtonText.innerText = chrome.i18n.getMessage("enableExtText");
             });
 
@@ -278,7 +278,7 @@ extensionButton.addEventListener("click", function () {
 
     // Save the state of the switch
     chrome.storage.sync.set({
-        extensionButton: document.querySelector("#extensionButton").checked
+        enable: document.querySelector("#extensionButton").checked
     });
 });
 
