@@ -2,6 +2,30 @@
 document.title = chrome.i18n.getMessage("optionPageTitle");
 document.querySelector("#optionsTitle").innerHTML = chrome.i18n.getMessage("optionPageTitle");
 document.querySelector("#saveButtonText").innerHTML = chrome.i18n.getMessage("save");
+document.querySelector("#mainSettingsTitle").innerHTML = chrome.i18n.getMessage("mainSettings");
+
+document.querySelector("#settingsHeaderText").innerHTML = chrome.i18n.getMessage("settings");
+document.querySelector("#sidebarMain").innerHTML = chrome.i18n.getMessage("mainMenu");
+document.querySelector("#sidebarWhitelist").innerHTML = chrome.i18n.getMessage("whitelist");
+document.querySelector("#sidebarBlacklist").innerHTML = chrome.i18n.getMessage("blacklist");
+
+document.querySelector("#addButtonWhitelistText").innerHTML = chrome.i18n.getMessage("addWebsiteButton");
+document.querySelector("#removeButtonWhitelistText").innerHTML = chrome.i18n.getMessage("removeWebsiteButton");
+document.querySelector("#descWhitelist").innerHTML = chrome.i18n.getMessage("whitelistDesc");
+document.querySelector("#titleWhitelist").innerHTML = chrome.i18n.getMessage("whitelist");
+document.querySelector("#input-whitelist").placeholder = chrome.i18n.getMessage("inputWebsitePlaceholder");
+document.querySelector("#input-whitelist").title = chrome.i18n.getMessage("inputWebsiteTitle");
+document.querySelector("#settingsHeaderText").innerHTML = chrome.i18n.getMessage("settings");
+
+document.querySelector("#addWebsiteBLButton").innerHTML = chrome.i18n.getMessage("addWebsiteButton");
+document.querySelector("#removeWebsiteBLButton").innerHTML = chrome.i18n.getMessage("removeWebsiteButton");
+document.querySelector("#descBlacklist").innerHTML = chrome.i18n.getMessage("blacklistDesc");
+document.querySelector("#titleBlacklist").innerHTML = chrome.i18n.getMessage("blacklist");
+document.querySelector("#input-blacklist").placeholder = chrome.i18n.getMessage("inputWebsitePlaceholder");
+document.querySelector("#input-blacklist").title = chrome.i18n.getMessage("inputWebsiteTitle");
+document.querySelector("#input-blacklist").title = chrome.i18n.getMessage("inputWebsiteTitle");
+document.querySelector("#whitelistDropdown")[0].text = chrome.i18n.getMessage("websitesDropdownFirst");
+document.querySelector("#blacklistDropdown")[0].text = chrome.i18n.getMessage("websitesDropdownFirst");
 
 
 // ### Extension switch on click event ###
@@ -214,10 +238,10 @@ function loadListDropdown(dropdown, type) {
             });
             // If the whitelist don't have website display it in dropdown
             if (data.whitelist.length == 0) {
-                dropdown[0].text = "Aucun site dans la liste...";
+                dropdown[0].text = chrome.i18n.getMessage("websitesDropdownNothing");
                 dropdown.setAttribute("disabled", "true");
             } else {
-                dropdown[0].text = "Choisissez un site...";
+                dropdown[0].text = chrome.i18n.getMessage("websitesDropdownFirst");
                 dropdown.removeAttribute("disabled");
             }
         });
@@ -230,10 +254,10 @@ function loadListDropdown(dropdown, type) {
             });
             // If the blacklist don't have website display it in dropdown
             if (data.blacklist.length == 0) {
-                dropdown[0].text = "Aucun site dans la liste...";
+                dropdown[0].text = chrome.i18n.getMessage("websitesDropdownNothing");
                 dropdown.setAttribute("disabled", "true");
             } else {
-                dropdown[0].text = "Choisissez un site...";
+                dropdown[0].text = chrome.i18n.getMessage("websitesDropdownFirst");
                 dropdown.removeAttribute("disabled");
             }
         });

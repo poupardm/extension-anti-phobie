@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
@@ -9,6 +9,7 @@
     <body>
         <div class="main d-flex justify-content-center">
             <div class="d-flex flex-row sidebar">
+                <!-- Sidebar -->
                 <div class="sidebar-container col-3">
                     <div class="sidebar-logo">
                         <div id="text-header" class="text-center">
@@ -17,27 +18,27 @@
                         </div>
                     </div>
                     <ul class="sidebar-navigation">
-                        <li class="header">Paramètres</li>
+                        <li class="header"><span id="settingsHeaderText"></span></li>
                         <a href="#">
                             <li id="general-link" class="active">
-                                <i class="fa fa-home pe-2" aria-hidden="true"></i> Général
+                                <i class="fa fa-home pe-2" aria-hidden="true"></i> <span id="sidebarMain"></span>
                             </li>
                         </a>
                         <a href="#whitelist">
                             <li id="whitelist-link">
-                                <i class="fa fa-tachometer pe-2" aria-hidden="true"></i> Liste Blanche
+                                <i class="fa fa-tachometer pe-2" aria-hidden="true"></i> <span id="sidebarWhitelist"></span>
                             </li>
                         </a>
                         <a href="#blacklist">
                             <li id="blacklist-link">
-                                <i class="fa fa-tachometer pe-2" aria-hidden="true"></i> Liste Noire
+                                <i class="fa fa-tachometer pe-2" aria-hidden="true"></i> <span id="sidebarBlacklist"></span>
                             </li>
                         </a>
                     </ul>
                 </div>
                 <!-- Settings Tab -->
                 <div class="content tab-general col-9">
-                    <h5 class="content-title">Paramètres Généraux</h5>
+                    <h5 class="content-title"><span id="mainSettingsTitle"></span> </h5>
                     <hr class="mt-4 mb-5 m-3">
                     <div class="ms-4 me-4 card">
                         <div class="form-check form-switch text-center card-body">
@@ -76,20 +77,20 @@
                 </div>
                 <!-- Whitelist Tab -->
                 <div class="content tab-whitelist col-9">
-                    <h5 class="content-title">Liste Blanche</h5>
-                    <p class="content-description">L'ajout de sites web dans la liste blanche permet d'autoriser le chargement des images sans traitement anti-phobie</p>
+                    <h5 class="content-title"><span id="titleWhitelist"></span></h5>
+                    <p class="content-description"><span id="descWhitelist"></span></p>
                     <hr class="mt-5 mb-5 m-3">
                     <div class="container">
                         <div class="input-group mb-3">
                             <form class="row col-12" method="POST">
                                 <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="Par exemple : www.exemple.fr"
+                                    <input type="text" class="form-control" placeholder=""
                                            pattern="([w]{3})+\.+[a-z0-9.-]+\.+[a-z]{2,}$"
-                                           title="Le site web doit être sous forme 'www.exemple.fr'"
+                                           title=""
                                            id="input-whitelist">
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-outline-success mb-3" id="addButtonWhitelist" >Ajouter un site web</button>
+                                    <button type="submit" class="btn btn-outline-success mb-3" id="addButtonWhitelist"><span id="addButtonWhitelistText"></span></span> </button>
                                 </div>
                             </form>
 
@@ -98,11 +99,11 @@
                             <form class="row col-12" method="POST">
                                 <div class="col-8">
                                     <select class="form-select" id="whitelistDropdown">
-                                        <option value="0" selected>Choisissez un site...</option>
+                                        <option value="0" selected></option>
                                     </select>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-outline-danger mb-3" id="removeButtonWhitelist" >Supprimer un site web</button>
+                                    <button type="submit" class="btn btn-outline-danger mb-3" id="removeButtonWhitelist"><span id="removeButtonWhitelistText"></span></button>
                                 </div>
                             </form>
                         </div>
@@ -111,20 +112,20 @@
                 </div>
                 <!-- Blacklist Tab -->
                 <div class="content tab-blacklist col-9">
-                    <h5 class="content-title">Liste Noire</h5>
-                    <p class="content-description">L'ajout de sites web dans la liste noire permet d'interdir le chargement des images contenant la/les phobie(s) parametrée(s)</p>
+                    <h5 class="content-title"><span id="titleBlacklist"></span></h5>
+                    <p class="content-description"><span id="descBlacklist"></span></p>
                     <hr class="mt-5 mb-5 m-3">
                     <div class="container">
                         <div class="input-group mb-3">
                             <form class="row col-12" method="POST">
                                 <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="Par exemple : www.exemple.fr"
+                                    <input type="text" class="form-control" placeholder=""
                                            pattern="([w]{3})+\.+[a-z0-9.-]+\.+[a-z]{2,}$"
-                                           title="Le site web doit être sous forme 'www.exemple.fr'"
+                                           title=""
                                            id="input-blacklist">
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-outline-success mb-3" id="addButtonBlackList" >Ajouter un site web</button>
+                                    <button type="submit" class="btn btn-outline-success mb-3" id="addButtonBlackList" ><span id="addWebsiteBLButton"></span></button>
                                 </div>
                             </form>
 
@@ -133,11 +134,11 @@
                             <form class="row col-12" method="POST">
                                 <div class="col-8">
                                     <select class="form-select" id="blacklistDropdown">
-                                        <option value="0" selected>Choisissez un site...</option>
+                                        <option value="0" selected></option>
                                     </select>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="submit" class="btn btn-outline-danger mb-3" id="removeButtonBlackList" >Supprimer un site web</button>
+                                    <button type="submit" class="btn btn-outline-danger mb-3" id="removeButtonBlackList" ><span id="removeWebsiteBLButton"></span></button>
                                 </div>
                             </form>
                         </div>

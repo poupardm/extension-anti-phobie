@@ -7,9 +7,13 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     });
 });
 
-/*chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.local.set({
+        whitelist: new Array(),
+        blacklist: new Array()
+    });
 });
-
+/*
 chrome.webNavigation.onCompleted.addListener(function(details) {
     let url = "http://127.0.0.1:5000/api/phobie?url=";
     url += details.url + "&phobies=herpetophobie";

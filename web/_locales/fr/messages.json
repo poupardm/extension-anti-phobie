@@ -39,5 +39,41 @@
   },
   "reptText": {
     "message": "Herpétophobie (peur des reptiles)"
+  },
+  "mainMenu": {
+    "message": "Général"
+  },
+  "whitelist": {
+    "message": "Liste Blanche"
+  },
+  "blacklist": {
+    "message": "Liste Noire"
+  },
+  "whitelistDesc": {
+    "message": "L'ajout de sites web dans la liste blanche permet d'autoriser le chargement des images sans traitement anti-phobie"
+  },
+  "blacklistDesc": {
+    "message": "L'ajout de sites web dans la liste noire permet d'interdir le chargement des images contenant la/les phobie(s) parametrée(s)"
+  },
+  "inputWebsitePlaceholder": {
+    "message": "Par exemple : www.exemple.fr"
+  },
+  "inputWebsiteTitle": {
+    "message": "Le site web doit être sous forme 'www.exemple.fr'"
+  },
+  "addWebsiteButton": {
+    "message": "Ajouter un site web"
+  },
+  "removeWebsiteButton": {
+    "message": "Supprimer un site web"
+  },
+  "websitesDropdownFirst": {
+    "message": "Choisissez un site..."
+  },
+  "websitesDropdownNothing": {
+    "message": "Aucun site dans la liste..."
+  },
+  "mainSettings": {
+    "message": "Paramètres Généraux"
   }
 }

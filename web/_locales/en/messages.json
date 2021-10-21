@@ -13,6 +13,12 @@
   "save": {
     "message": "Save"
   },
+  "wtAddText": {
+    "message": "Add to whitelist"
+  },
+  "wtRemoveText": {
+    "message": "Remove from whitelist"
+  },
   "disableExtText": {
     "message": "Disable extension"
   },
@@ -33,5 +39,41 @@
   },
   "reptText": {
     "message": "Herpetophobia (fear of reptiles)"
+  },
+  "mainMenu": {
+    "message": "General settings"
+  },
+  "whitelist": {
+    "message": "Whitelist"
+  },
+  "blacklist": {
+    "message": "Blacklist"
+  },
+  "whitelistDesc": {
+    "message": "Adding websites to the whitelist allows you to authorize the loading of images without anti-phobia treatment"
+  },
+  "blacklistDesc": {
+    "message": "Adding websites to the blacklist makes it possible to prohibit the loading of images containing the configured phobia(s)"
+  },
+  "inputWebsitePlaceholder": {
+    "message": "For example : www.example.fr"
+  },
+  "inputWebsiteTitle": {
+    "message": "\nThe website must be in the form 'www.example.fr'"
+  },
+  "addWebsiteButton": {
+    "message": "Add website"
+  },
+  "removeWebsiteButton": {
+    "message": "Delete a website"
+  },
+  "websitesDropdownFirst": {
+    "message": "Choose a website ..."
+  },
+  "websitesDropdownNothing": {
+    "message": "No website in the list ..."
+  },
+  "mainSettings": {
+    "message": "General settings"
   }
 }
