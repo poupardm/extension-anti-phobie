@@ -7,7 +7,16 @@
   "background": {
     "service_worker": "js/background.js"
   },
-  "permissions": ["tabs","storage", "activeTab", "scripting","webNavigation" ],
+  "content_scripts": [ {
+    "matches": [
+      "http://*/*",
+      "https://*/*"
+    ],
+    "js": [ "js/contentScript.js" ],
+    "css": [ "css/hideImages.css"],
+    "all_frames": true
+  } ],
+  "permissions": ["tabs","storage", "activeTab", "scripting","webNavigation", "contextMenus"],
   "action": {
     "default_popup": "index.html",
     "default_icon": {

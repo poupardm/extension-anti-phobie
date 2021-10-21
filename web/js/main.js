@@ -41,6 +41,9 @@ function addWhitelist() {
 // ### Extension switch on click event ###
 var extensionButton = document.getElementById("extensionButton");
 extensionButton.addEventListener("click", function () {
+    chrome.runtime.sendMessage({greeting: "hello"}, function(response) {
+        console.log(response.farewell);
+    });
     // Confirm if you want to desactivate the extension
     let extensionButtonText = document.getElementById("extensionButtonText");
     if (!extensionButton.checked && confirm( chrome.i18n.getMessage("disableExtQuestion") ) ) {
