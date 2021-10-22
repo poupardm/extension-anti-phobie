@@ -1,35 +1,67 @@
-// Load text from locale files
+// Chargement de différents textes du popup
 document.title = chrome.i18n.getMessage("extName");
 document.querySelector("#popupTitle").innerHTML = chrome.i18n.getMessage("extName");
 document.querySelector("#settingText").innerHTML = chrome.i18n.getMessage("settings");
+// Récupération du bouton d'état et de whitelist du popup
+const wlButton = document.getElementById("wtButton");
+const extensionButton = document.getElementById("extensionButton");
 
-
-// ### Window load event ###
+/** Event load
+ * - Description : Se lance lors du chargement du popup
+ **/
 window.addEventListener("load", function () {
-    // Get state of the extension switch
+    // Obtenir l'état de l'extension (activée/désactivée)
     chrome.storage.sync.get('enable', function(data) {
+        // Activation ou non du switch button en fonction de l'état stocké
         document.querySelector("#extensionButton").checked = data.enable
-        // Set the text of the extension button
+        // Chargement du texte du bouton à partir du dossier _locales
         let extensionButtonText = document.getElementById("extensionButtonText");
         if(data.enable) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
         else extensionButtonText.innerText = chrome.i18n.getMessage("enableExtText");
     });
-
+    // Obtenir les infos de la page courante
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        // Récupération et formatage de l'url
         var url = formatURL(tabs[0].url);
+        // Obtention de la liste blanche stockée
         chrome.storage.local.get('whitelist', function(data) {
-            //alert(url + " -> " + isWhitelisted(data.whitelist, url));
+            // Appel de la fonction setStateWhitelist et isWhitelisted
             setStateWhitelist(isWhitelisted(data.whitelist, url));
         });
     });
-    wtButtonText.innerText = chrome.i18n.getMessage("wtAddText");
+    //wtButtonText.innerText = chrome.i18n.getMessage("wtAddText");
 });
 
 
+
+// =-=-=-=-=-=-= Partie concernant la whitelist =-=-=-=-=-=-= \\
+
+/** Event wlButton
+ * - Description : Evénement se lancant lors du clic sur le
+ *                 bouton d'ajout/suppression de la whitelist
+ **/
+wlButton.addEventListener("click", function () {
+    //Si ajoute le site à la whitelist alors
+    if (wlButton.value == 0) {
+        setStateWhitelist(true);
+        addWhitelist();
+    } // Sinon on enlève le site à la whitelist
+    else {
+        setStateWhitelist(false)
+        removeWhitelist();
+    }
+});
+
+
+/** Est-il whitelist ?
+ * - Description : Fonction permettant de retourner un booléan en si
+ *                 le site passé en paramètre est dans la whitelist
+ **/
 function isWhitelisted(whitelist, currentTabUrl) {
-    // Get state of the extension switch
-    isInWhitelist = false;
+    let isInWhitelist = false;
+    // Parcours de chaque site dans la whitelist
     for(var i = 0; i < whitelist.length; i++) {
+        // Si le site parcouru correspond ayu site passé en paramètre
         if(whitelist[i].toString().localeCompare(currentTabUrl.toString()) === 0) {
             isInWhitelist = true;
         }
@@ -37,85 +69,112 @@ function isWhitelisted(whitelist, currentTabUrl) {
     return isInWhitelist;
 }
 
+
+/** Formatage d'une url
+ * - Description : Fonction permettant de formater une url en paramètre de
+ *                 http(s)://exemple.fr/test/exemple.html vers www.exemple.fr
+ **/
 function formatURL(url) {
+    // regex pattern permettant de transformer l'url en paramètre
     return url.replace(/(^\w+:|^)\/\//, 'www.').replace(/\/+[a-zA-Z]+.*/, '');
 }
 
+
+/** Ajout dans la whitelist
+ * - Description : Fonction permettant d'ajouter un site
+ *                 dans la whitelist stockée
+ **/
 function addWhitelist() {
+    // Obtention des infos de la page courante
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        // Récupération et formattage de l'url
         var url = formatURL(tabs[0].url);
-        tab = new Array();
+        // Nouveau tableau vide
+        let whitelistTab = new Array();
+        // Récupération de la whitelist stockée
         chrome.storage.local.get('whitelist', function(data) {
-            tab = data.whitelist
-            tab.push(url);
+            // La whitelist stockée est mise dans le tableau
+            whitelistTab = data.whitelist
+            // On y ajoute l'url récupérer ci-dessus
+            whitelistTab.push(url);
+            // On sauvegarde la nouvelle whitelist
             chrome.storage.local.set({
-                whitelist: tab
+                whitelist: whitelistTab
             });
         });
-
-        chrome.storage.local.get('whitelist', function(data) {
-            alert(data.whitelist);
-        });
     });
-
 }
 
+
+/** Suppression dans la whitelist
+ * - Description : Fonction permettant de supprime un site
+ *                 dans la whitelist stockée
+ **/
 function removeWhitelist() {
+    // Obtention des infos de la page courante
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        var url = formatURL(tabs[0].url);
-        alert(url);
-        tab = new Array();
+        // Récupération et formattage de l'url
+        let url = formatURL(tabs[0].url);
+        // Nouveau tableau vide
+        let whitelistTab = new Array();
+        // Récupération de la whitelist stockée
         chrome.storage.local.get('whitelist', function(data) {
-            tab = data.whitelist
-            for(var i = 0; i < tab.length; i++) {
-                if(url.toString().localeCompare(tab[i].toString()) === 0) {
-                    tab.splice(i, 1);
+            // La whitelist stockée est mise dans le tableau
+            whitelistTab = data.whitelist
+            // Parcours de chaque site dans la whitelist
+            for(let i = 0; i < whitelistTab.length; i++) {
+                // Si l'url est dans la whitelist
+                if(url.toString().localeCompare(whitelistTab[i].toString()) === 0) {
+                    // On l'enlève
+                    whitelistTab.splice(i, 1);
                 }
             }
+            // On enregistre les changements
             chrome.storage.local.set({
-                whitelist: tab
+                whitelist: whitelistTab
             });
         });
     });
 }
 
-var wlButton = document.getElementById("wtButton");
+
+/** Modification de l'état
+ * - Description : Fonction permettant de modifier l'état
+ *                 visuel du popup en fonction de l'état
+ **/
 function setStateWhitelist(state) {
-    // Confirm if you want to desactivate the extension
+    // Récupération du texte du bouton d'ajout dans la whitelist
     let wtButtonText = document.getElementById("wtButtonText");
-    //Si on désactive l'extension
+    // Si l'état est false alors
     if (!state) {
+        // Affichage de l'étoile vide
         document.getElementById("filled-star").style.display = "none";
         document.getElementById("star").style.display = "inline";
         wlButton.value = 0;
+        // Affichage du texte d'ajout dans la whitelist
         wtButtonText.innerText = chrome.i18n.getMessage("wtAddText");
-    } // Sinon on active l'extension alors
+    }
     else {
+        // Affichage de l'étoile pleine
         document.getElementById("star").style.display = "none";
         document.getElementById("filled-star").style.display = "inline";
         wlButton.value = 1;
+        // Affichage du texte de suppression de la whitelist
         wtButtonText.innerText = chrome.i18n.getMessage("wtRemoveText");
     }
 }
 
-// ### Extension switch on click event ###
-wlButton.addEventListener("click", function () {
-    //Si on désactive l'extension
-    if (wlButton.value == 0) {
-        setStateWhitelist(true);
-        addWhitelist();
-    } // Sinon on active l'extension alors
-    else {
-        setStateWhitelist(false)
-        removeWhitelist();
-    }
-});
 
-// ### Extension switch on click event ###
-var extensionButton = document.getElementById("extensionButton");
+
+
+// =-=-=-=-=-=-= Partie concernant le bouton d'état de l'extension =-=-=-=-=-=-= \\
+
+/** Event extensionButton
+ * - Description : Evénement se lancant lors du clic sur le
+ *                 bouton d'état de l'extension
+ **/
 extensionButton.addEventListener("click", function () {
-
-    // Confirm if you want to desactivate the extension
+    // Récupération du texte d'état de l'extension
     let extensionButtonText = document.getElementById("extensionButtonText");
 
     //Si on désactive l'extension
@@ -127,13 +186,23 @@ extensionButton.addEventListener("click", function () {
     else if(extensionButton.checked) {
         extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
     }
-    // Save the state of the switch
+
+    // Sauvergarde de l'état
     chrome.storage.sync.set({
         enable: document.querySelector("#extensionButton").checked
     });
 });
 
+
+
+// =-=-=-=-=-=-= Partie concernant le bouton des paramètres de l'extension =-=-=-=-=-=-= \\
+
+/** Event extensionButton
+ * - Description : Evénement se lancant lors du clic sur le
+ *                 bouton des paramètres de l'extension
+ **/
 document.querySelector('#optionsButton').addEventListener('click', function() {
+    // Ouverture de la page des options
     if (chrome.runtime.openOptionsPage) {
         chrome.runtime.openOptionsPage();
     } else {

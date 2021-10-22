@@ -1,5 +1,14 @@
 
+// Activer l'extention lors de l'ouverture du navigateur
+chrome.storage.local.set({
+    enable: true
+});
+
+/** Event onInstalled
+ * - Description : Se lance lors de l'installation de l'extension
+ **/
 chrome.runtime.onInstalled.addListener(() => {
+    // Initialisation de variables dans le stockage
     chrome.storage.local.set({
         whitelist: new Array(),
         blacklist: new Array(),
@@ -7,17 +16,17 @@ chrome.runtime.onInstalled.addListener(() => {
     });
 });
 
-chrome.storage.sync.set({
-    enable: true
-});
 
-// add a listener to initialize the ImgHider when the page is loaded/updated
+/** Event onUpdated
+ * - Description : Se lance lors de l'update d'une page
+ **/
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    chrome.storage.sync.get('enable', function(data) {
+    // Récupération de l'état de l'extension
+    chrome.storage.local.get('enable', function(data) {
+        // Récupération des infos de la page
         chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, {hide: data.enable}, function (response) {
-                console.log(response.farewell);
-            });
+            // Envoie d'un message
+            chrome.tabs.sendMessage(tabs[0].id, {hide: data.enable});
         });
     });
 });
