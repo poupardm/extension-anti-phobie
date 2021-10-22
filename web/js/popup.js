@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
     });
 
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        url = tabs[0].url.replace(/(^\w+:|^)\/\//, 'www.');
+        var url = formatURL(tabs[0].url);
         chrome.storage.local.get('whitelist', function(data) {
             //alert(url + " -> " + isWhitelisted(data.whitelist, url));
             setStateWhitelist(isWhitelisted(data.whitelist, url));
@@ -37,9 +37,13 @@ function isWhitelisted(whitelist, currentTabUrl) {
     return isInWhitelist;
 }
 
+function formatURL(url) {
+    return url.replace(/(^\w+:|^)\/\//, 'www.').replace(/\/+[a-zA-Z]+.*/, '');
+}
+
 function addWhitelist() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        url = tabs[0].url.replace(/(^\w+:|^)\/\//, 'www.');
+        var url = formatURL(tabs[0].url);
         tab = new Array();
         chrome.storage.local.get('whitelist', function(data) {
             tab = data.whitelist
@@ -55,25 +59,25 @@ function addWhitelist() {
     });
 
 }
-// #################################################
+
 function removeWhitelist() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        url = tabs[0].url.replace(/(^\w+:|^)\/\//, 'www.');
+        var url = formatURL(tabs[0].url);
+        alert(url);
         tab = new Array();
         chrome.storage.local.get('whitelist', function(data) {
             tab = data.whitelist
-            tab.push(url);
+            for(var i = 0; i < tab.length; i++) {
+                if(url.toString().localeCompare(tab[i].toString()) === 0) {
+                    tab.splice(i, 1);
+                }
+            }
             chrome.storage.local.set({
                 whitelist: tab
             });
         });
-
-        chrome.storage.local.get('whitelist', function(data) {
-            alert(data.whitelist);
-        });
     });
 }
-// #################################################
 
 var wlButton = document.getElementById("wtButton");
 function setStateWhitelist(state) {
@@ -103,6 +107,7 @@ wlButton.addEventListener("click", function () {
     } // Sinon on active l'extension alors
     else {
         setStateWhitelist(false)
+        removeWhitelist();
     }
 });
 
