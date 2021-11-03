@@ -1,0 +1,1398 @@
+{
+    "fr": [
+        {
+            "word": "python",
+            "score": 25
+        },
+        {
+            "word": "reptile",
+            "score": 100
+        },
+        {
+            "word": "couleuvre",
+            "score": 100
+        },
+        {
+            "word": "boa",
+            "score": 25
+        },
+        {
+            "word": "vipère",
+            "score": 100
+        },
+        {
+            "word": "dragon",
+            "score": 25
+        },
+        {
+            "word": "crotale",
+            "score": 100
+        },
+        {
+            "word": "anaconda",
+            "score": 100
+        },
+        {
+            "word": "cobra",
+            "score": 25
+        },
+        {
+            "word": "aspic",
+            "score": 100
+        },
+        {
+            "word": "venimeux",
+            "score": 100
+        },
+        {
+            "word": "velu",
+            "score": 25
+        },
+        {
+            "word": "crocodile",
+            "score": 100
+        },
+        {
+            "word": "hydre",
+            "score": 50
+        },
+        {
+            "word": "lézard",
+            "score": 100
+        },
+        {
+            "word": "basilic",
+            "score": 25
+        },
+        {
+            "word": "queue",
+            "score": 25
+        },
+        {
+            "word": "venin",
+            "score": 100
+        },
+        {
+            "word": "morsure",
+            "score": 50
+        },
+        {
+            "word": "naja",
+            "score": 100
+        },
+        {
+            "word": "Gorgone",
+            "score": 0
+        },
+        {
+            "word": "mordu",
+            "score": 50
+        },
+        {
+            "word": "orvet",
+            "score": 0
+        },
+        {
+            "word": "Serpentaire",
+            "score": 100
+        },
+        {
+            "word": "caducée",
+            "score": 0
+        },
+        {
+            "word": "monstre",
+            "score": 25
+        },
+        {
+            "word": "amphisbène",
+            "score": 0
+        },
+        {
+            "word": "ramper",
+            "score": 100
+        },
+        {
+            "word": "écaille",
+            "score": 100
+        },
+        {
+            "word": "ouroboros",
+            "score": 0
+        },
+        {
+            "word": "anguille",
+            "score": 0
+        },
+        {
+            "word": "constellation",
+            "score": 0
+        },
+        {
+            "word": "enroulé",
+            "score": 0
+        },
+        {
+            "word": "phobie",
+            "score": 0
+        },
+        {
+            "word": "proie",
+            "score": 0
+        },
+        {
+            "word": "couleuvre à collier",
+            "score": 100
+        },
+        {
+            "word": "mamba",
+            "score": 100
+        },
+        {
+            "word": "iguane",
+            "score": 0
+        },
+        {
+            "word": "alligator",
+            "score": 0
+        },
+        {
+            "word": "méduse",
+            "score": 0
+        },
+        {
+            "word": "peau",
+            "score": 0
+        },
+        {
+            "word": "rongeur",
+            "score": 0
+        },
+        {
+            "word": "mordre",
+            "score": 0
+        },
+        {
+            "word": "dard",
+            "score": 0
+        },
+        {
+            "word": "sifflement",
+            "score": 0
+        },
+        {
+            "word": "symbole",
+            "score": 0
+        },
+        {
+            "word": "tentateur",
+            "score": 0
+        },
+        {
+            "word": "Laocoon",
+            "score": 0
+        },
+        {
+            "word": "ophiophobie",
+            "score": 100
+        },
+        {
+            "word": "vouivre",
+            "score": 0
+        },
+        {
+            "word": "bâton",
+            "score": 0
+        },
+        {
+            "word": "serpent de mer",
+            "score": 100
+        },
+        {
+            "word": "tortueux",
+            "score": 0
+        },
+        {
+            "word": "ailé",
+            "score": 0
+        },
+        {
+            "word": "sonnette",
+            "score": 0
+        },
+        {
+            "word": "animal",
+            "score": 0
+        },
+        {
+            "word": "Cerbère",
+            "score": 0
+        },
+        {
+            "word": "chimère",
+            "score": 0
+        },
+        {
+            "word": "monstrueux",
+            "score": 0
+        },
+        {
+            "word": "poison",
+            "score": 0
+        },
+        {
+            "word": "Loki",
+            "score": 0
+        },
+        {
+            "word": "Mélusine",
+            "score": 0
+        },
+        {
+            "word": "souris",
+            "score": 0
+        },
+        {
+            "word": "liane",
+            "score": 0
+        },
+        {
+            "word": "Quetzalcoatl",
+            "score": 0
+        },
+        {
+            "word": "bouvier",
+            "score": 0
+        },
+        {
+            "word": "caïman",
+            "score": 0
+        },
+        {
+            "word": "Esculape",
+            "score": 0
+        },
+        {
+            "word": "ophidien",
+            "score": 100
+        },
+        {
+            "word": "ovipare",
+            "score": 0
+        },
+        {
+            "word": "piquer",
+            "score": 0
+        },
+        {
+            "word": "siffler",
+            "score": 0
+        },
+        {
+            "word": "charmeur",
+            "score": 0
+        },
+        {
+            "word": "gigantesque",
+            "score": 0
+        },
+        {
+            "word": "mordant",
+            "score": 0
+        },
+        {
+            "word": "mue",
+            "score": 0
+        },
+        {
+            "word": "Orochimaru",
+            "score": 0
+        },
+        {
+            "word": "rusé",
+            "score": 0
+        },
+        {
+            "word": "Serpentard",
+            "score": 0
+        },
+        {
+            "word": "tétrapode",
+            "score": 0
+        },
+        {
+            "word": "zodiaque chinois",
+            "score": 0
+        },
+        {
+            "word": "Apophis",
+            "score": 0
+        },
+        {
+            "word": "aquatique",
+            "score": 0
+        },
+        {
+            "word": "coq",
+            "score": 0
+        },
+        {
+            "word": "créature",
+            "score": 0
+        },
+        {
+            "word": "croc",
+            "score": 0
+        },
+        {
+            "word": "perfide",
+            "score": 0
+        },
+        {
+            "word": "peur",
+            "score": 0
+        },
+        {
+            "word": "piqué",
+            "score": 0
+        },
+        {
+            "word": "rampant",
+            "score": 0
+        },
+        {
+            "word": "rat",
+            "score": 0
+        },
+        {
+            "word": "tête",
+            "score": 0
+        },
+        {
+            "word": "cocatrix",
+            "score": 0
+        },
+        {
+            "word": "glisse",
+            "score": 0
+        },
+        {
+            "word": "gueule",
+            "score": 0
+        },
+        {
+            "word": "mâchoire",
+            "score": 0
+        },
+        {
+            "word": "œuf",
+            "score": 0
+        },
+        {
+            "word": "crochets",
+            "score": 0
+        },
+        {
+            "word": "guivre",
+            "score": 0
+        },
+        {
+            "word": "kundalini",
+            "score": 0
+        },
+        {
+            "word": "python molure",
+            "score": 100
+        },
+        {
+            "word": "tricot rayé",
+            "score": 100
+        },
+        {
+            "word": "trigonocéphale",
+            "score": 100
+        },
+        {
+            "word": "vipère aspic",
+            "score": 100
+        },
+        {
+            "word": "aglyphe",
+            "score": 100
+        },
+        {
+            "word": "Bothrops",
+            "score": 100
+        },
+        {
+            "word": "constriction",
+            "score": 0
+        },
+        {
+            "word": "couleuvre à échelons",
+            "score": 100
+        },
+        {
+            "word": "couleuvre bordelaise",
+            "score": 100
+        },
+        {
+            "word": "couleuvre de Montpellier",
+            "score": 100
+        },
+        {
+            "word": "couleuvre d'Esculape",
+            "score": 100
+        },
+        {
+            "word": "couleuvre verte et jaune",
+            "score": 100
+        },
+        {
+            "word": "couleuvre vipérine",
+            "score": 100
+        },
+        {
+            "word": "élaps",
+            "score": 100
+        },
+        {
+            "word": "gavial",
+            "score": 0
+        },
+        {
+            "word": "haje",
+            "score": 100
+        },
+        {
+            "word": "herpétophobie",
+            "score": 0
+        },
+        {
+            "word": "Hydre mâle",
+            "score": 0
+        },
+        {
+            "word": "lotus",
+            "score": 0
+        },
+        {
+            "word": "Micrurus",
+            "score": 100
+        },
+        {
+            "word": "mythe",
+            "score": 0
+        },
+        {
+            "word": "nâga",
+            "score": 0
+        },
+        {
+            "word": "nombril",
+            "score": 0
+        },
+        {
+            "word": "Ophiuchus",
+            "score": 0
+        },
+        {
+            "word": "pélamyde",
+            "score": 0
+        },
+        {
+            "word": "saurien",
+            "score": 0
+        },
+        {
+            "word": "serpenteau",
+            "score": 100
+        },
+        {
+            "word": "sinueux",
+            "score": 0
+        },
+        {
+            "word": "squamate",
+            "score": 0
+        },
+        {
+            "word": "tarasque",
+            "score": 0
+        },
+        {
+            "word": "Unukalhai",
+            "score": 0
+        },
+        {
+            "word": "vipère à cornes",
+            "score": 100
+        },
+        {
+            "word": "vipère heurtante",
+            "score": 100
+        },
+        {
+            "word": "vivarium",
+            "score": 0
+        }
+    ],
+    "en": [
+        {
+            "word": "snaky",
+            "score": 0
+        },
+        {
+            "word": "cobra",
+            "score": 0
+        },
+        {
+            "word": "venom",
+            "score": 0
+        },
+        {
+            "word": "adder",
+            "score": 0
+        },
+        {
+            "word": "ophidian",
+            "score": 0
+        },
+        {
+            "word": "viper",
+            "score": 0
+        },
+        {
+            "word": "mongoose",
+            "score": 0
+        },
+        {
+            "word": "snake charmer",
+            "score": 0
+        },
+        {
+            "word": "ophiolatry",
+            "score": 0
+        },
+        {
+            "word": "snake pit",
+            "score": 0
+        },
+        {
+            "word": "ophiology",
+            "score": 0
+        },
+        {
+            "word": "colubrine",
+            "score": 0
+        },
+        {
+            "word": "racer",
+            "score": 0
+        },
+        {
+            "word": "reptile",
+            "score": 0
+        },
+        {
+            "word": "gorgon",
+            "score": 0
+        },
+        {
+            "word": "krait",
+            "score": 0
+        },
+        {
+            "word": "mamba",
+            "score": 0
+        },
+        {
+            "word": "coral snake",
+            "score": 100
+        },
+        {
+            "word": "sea snake",
+            "score": 100
+        },
+        {
+            "word": "ophiophagous",
+            "score": 0
+        },
+        {
+            "word": "caduceus",
+            "score": 0
+        },
+        {
+            "word": "king cobra",
+            "score": 0
+        },
+        {
+            "word": "ecdysis",
+            "score": 0
+        },
+        {
+            "word": "water snake",
+            "score": 100
+        },
+        {
+            "word": "colubrid",
+            "score": 100
+        },
+        {
+            "word": "fang",
+            "score": 0
+        },
+        {
+            "word": "grass snake",
+            "score": 100
+        },
+        {
+            "word": "green snake",
+            "score": 0
+        },
+        {
+            "word": "hemipenis",
+            "score": 0
+        },
+        {
+            "word": "exuviae",
+            "score": 0
+        },
+        {
+            "word": "asp",
+            "score": 0
+        },
+        {
+            "word": "python",
+            "score": 0
+        },
+        {
+            "word": "scale",
+            "score": 0
+        },
+        {
+            "word": "snake",
+            "score": 0
+        },
+        {
+            "word": "garter snake",
+            "score": 100
+        },
+        {
+            "word": "constrictor",
+            "score": 100
+        },
+        {
+            "word": "pit viper",
+            "score": 0
+        },
+        {
+            "word": "hognose snake",
+            "score": 100
+        },
+        {
+            "word": "rat snake",
+            "score": 100
+        },
+        {
+            "word": "rattlesnake",
+            "score": 0
+        },
+        {
+            "word": "house snake",
+            "score": 100
+        },
+        {
+            "word": "anaconda",
+            "score": 0
+        },
+        {
+            "word": "toxin",
+            "score": 0
+        },
+        {
+            "word": "kingsnake",
+            "score": 100
+        },
+        {
+            "word": "caudata",
+            "score": 0
+        },
+        {
+            "word": "ophiophagus",
+            "score": 100
+        },
+        {
+            "word": "apodal",
+            "score": 0
+        },
+        {
+            "word": "thanatophidia",
+            "score": 100
+        },
+        {
+            "word": "boa",
+            "score": 0
+        },
+        {
+            "word": "pseudechis",
+            "score": 100
+        },
+        {
+            "word": "water moccasin",
+            "score": 100
+        },
+        {
+            "word": "ophiophilist",
+            "score": 100
+        },
+        {
+            "word": "snakeless",
+            "score": 0
+        },
+        {
+            "word": "belly",
+            "score": 0
+        },
+        {
+            "word": "deaf adder",
+            "score": 100
+        },
+        {
+            "word": "Squamata",
+            "score": 0
+        },
+        {
+            "word": "copperhead",
+            "score": 0
+        },
+        {
+            "word": "antivenin",
+            "score": 0
+        },
+        {
+            "word": "Elaps",
+            "score": 100
+        },
+        {
+            "word": "hibernate",
+            "score": 0
+        },
+        {
+            "word": "Lampropeltis",
+            "score": 100
+        },
+        {
+            "word": "proteroglyphous",
+            "score": 100
+        },
+        {
+            "word": "anguine",
+            "score": 0
+        },
+        {
+            "word": "ophic",
+            "score": 0
+        },
+        {
+            "word": "lepidophobia",
+            "score": 100
+        },
+        {
+            "word": "apodous",
+            "score": 0
+        },
+        {
+            "word": "Callophis",
+            "score": 100
+        },
+        {
+            "word": "dipsas",
+            "score": 100
+        },
+        {
+            "word": "diapsid",
+            "score": 0
+        },
+        {
+            "word": "serpentarium",
+            "score": 0
+        },
+        {
+            "word": "secretary bird",
+            "score": 0
+        },
+        {
+            "word": "Heterodon",
+            "score": 0
+        },
+        {
+            "word": "Pituophis",
+            "score": 100
+        },
+        {
+            "word": "Psammophis",
+            "score": 100
+        },
+        {
+            "word": "supralabial",
+            "score": 0
+        },
+        {
+            "word": "shieldtail",
+            "score": 100
+        },
+        {
+            "word": "death adder",
+            "score": 0
+        },
+        {
+            "word": "zygosphene",
+            "score": 0
+        },
+        {
+            "word": "eel",
+            "score": 0
+        },
+        {
+            "word": "harlequin",
+            "score": 0
+        },
+        {
+            "word": "Eunectes",
+            "score": 100
+        },
+        {
+            "word": "Rhinophis",
+            "score": 100
+        },
+        {
+            "word": "fer-de-lance",
+            "score": 0
+        },
+        {
+            "word": "cowsucker",
+            "score": 0
+        },
+        {
+            "word": "elapid",
+            "score": 100
+        },
+        {
+            "word": "Thamnophis",
+            "score": 100
+        },
+        {
+            "word": "Hoplocephalus",
+            "score": 100
+        },
+        {
+            "word": "Dendraspis",
+            "score": 100
+        },
+        {
+            "word": "naja",
+            "score": 100
+        },
+        {
+            "word": "cylinder snake",
+            "score": 0
+        },
+        {
+            "word": "thunder snake",
+            "score": 0
+        },
+        {
+            "word": "Dispholidus",
+            "score": 100
+        },
+        {
+            "word": "Eryx",
+            "score": 0
+        },
+        {
+            "word": "Ophisaurus",
+            "score": 100
+        },
+        {
+            "word": "Masticophis",
+            "score": 100
+        },
+        {
+            "word": "Natrix",
+            "score": 100
+        },
+        {
+            "word": "hiss",
+            "score": 0
+        },
+        {
+            "word": "proteroglypha",
+            "score": 100
+        },
+        {
+            "word": "ribbon snake",
+            "score": 100
+        },
+        {
+            "word": "Elachistodontidae",
+            "score": 100
+        },
+        {
+            "word": "gastrostege",
+            "score": 0
+        },
+        {
+            "word": "false coral snake",
+            "score": 100
+        },
+        {
+            "word": "terrarium",
+            "score": 0
+        },
+        {
+            "word": "wampum snake",
+            "score": 100
+        },
+        {
+            "word": "king snake",
+            "score": 100
+        },
+        {
+            "word": "roughtail",
+            "score": 0
+        },
+        {
+            "word": "split-tongued",
+            "score": 0
+        },
+        {
+            "word": "Aniliidae",
+            "score": 100
+        },
+        {
+            "word": "Farancia",
+            "score": 0
+        },
+        {
+            "word": "caecilian",
+            "score": 100
+        },
+        {
+            "word": "bungarum",
+            "score": 100
+        },
+        {
+            "word": "grey snake",
+            "score": 0
+        },
+        {
+            "word": "sand snake",
+            "score": 0
+        },
+        {
+            "word": "Amphiuma",
+            "score": 0
+        },
+        {
+            "word": "Trimerorhinus",
+            "score": 100
+        },
+        {
+            "word": "squamate",
+            "score": 0
+        },
+        {
+            "word": "natricine",
+            "score": 100
+        },
+        {
+            "word": "opisthoglyph",
+            "score": 100
+        },
+        {
+            "word": "Storeria",
+            "score": 100
+        },
+        {
+            "word": "Leptophis",
+            "score": 100
+        },
+        {
+            "word": "eye cap",
+            "score": 100
+        },
+        {
+            "word": "serpentology",
+            "score": 100
+        },
+        {
+            "word": "Causus",
+            "score": 0
+        },
+        {
+            "word": "dugite",
+            "score": 100
+        },
+        {
+            "word": "brille",
+            "score": 0
+        },
+        {
+            "word": "aboma",
+            "score": 0
+        },
+        {
+            "word": "coluber",
+            "score": 100
+        },
+        {
+            "word": "Reptilia",
+            "score": 0
+        },
+        {
+            "word": "wolf snake",
+            "score": 100
+        },
+        {
+            "word": "perturbed",
+            "score": 0
+        },
+        {
+            "word": "ground snake",
+            "score": 100
+        },
+        {
+            "word": "Hydrophis",
+            "score": 100
+        },
+        {
+            "word": "red snake",
+            "score": 0
+        },
+        {
+            "word": "wrap",
+            "score": 0
+        },
+        {
+            "word": "Elaphe",
+            "score": 100
+        },
+        {
+            "word": "tetrapod",
+            "score": 0
+        },
+        {
+            "word": "reptilian",
+            "score": 0
+        },
+        {
+            "word": "opisthoglyphous",
+            "score": 100
+        },
+        {
+            "word": "egg",
+            "score": 0
+        },
+        {
+            "word": "cerastes",
+            "score": 100
+        },
+        {
+            "word": "two–headed snake",
+            "score": 100
+        },
+        {
+            "word": "tongue",
+            "score": 0
+        },
+        {
+            "word": "cat snake",
+            "score": 100
+        },
+        {
+            "word": "reticulated python",
+            "score": 100
+        },
+        {
+            "word": "stenostome",
+            "score": 100
+        },
+        {
+            "word": "wart snake",
+            "score": 100
+        },
+        {
+            "word": "viperoides",
+            "score": 100
+        },
+        {
+            "word": "ring–necked snake",
+            "score": 100
+        },
+        {
+            "word": "transverse bone",
+            "score": 0
+        },
+        {
+            "word": "afraid",
+            "score": 0
+        },
+        {
+            "word": "mussurana",
+            "score": 100
+        },
+        {
+            "word": "Amblycephalidae",
+            "score": 100
+        },
+        {
+            "word": "Bitis",
+            "score": 100
+        },
+        {
+            "word": "Leptotyphlops",
+            "score": 100
+        },
+        {
+            "word": "formication",
+            "score": 0
+        },
+        {
+            "word": "Xenopeltidae",
+            "score": 100
+        },
+        {
+            "word": "mangrove snake",
+            "score": 100
+        },
+        {
+            "word": "fear",
+            "score": 0
+        },
+        {
+            "word": "Eosuchia",
+            "score": 0
+        },
+        {
+            "word": "leaf–nosed snake",
+            "score": 100
+        },
+        {
+            "word": "brumation",
+            "score": 0
+        },
+        {
+            "word": "anal plate",
+            "score": 0
+        },
+        {
+            "word": "alligator",
+            "score": 0
+        },
+        {
+            "word": "Atractaspis",
+            "score": 100
+        },
+        {
+            "word": "hydrophid",
+            "score": 100
+        },
+        {
+            "word": "Uropeltidae",
+            "score": 100
+        },
+        {
+            "word": "tiger snake",
+            "score": 100
+        },
+        {
+            "word": "smooth snake",
+            "score": 100
+        },
+        {
+            "word": "caution",
+            "score": 0
+        },
+        {
+            "word": "file snake",
+            "score": 100
+        },
+        {
+            "word": "Homalopsidae",
+            "score": 0
+        },
+        {
+            "word": "sand viper",
+            "score": 100
+        },
+        {
+            "word": "Zamenis",
+            "score": 100
+        },
+        {
+            "word": "exuviation",
+            "score": 0
+        },
+        {
+            "word": "Boidae",
+            "score": 100
+        },
+        {
+            "word": "whip snake",
+            "score": 100
+        },
+        {
+            "word": "rhachiodont",
+            "score": 100
+        },
+        {
+            "word": "esophageal teeth",
+            "score": 100
+        },
+        {
+            "word": "Diapsida",
+            "score": 0
+        },
+        {
+            "word": "pythonomorph",
+            "score": 0
+        },
+        {
+            "word": "green mamba",
+            "score": 0
+        },
+        {
+            "word": "Typhlopidae",
+            "score": 100
+        },
+        {
+            "word": "Parapsida",
+            "score": 0
+        },
+        {
+            "word": "Carphophis",
+            "score": 100
+        },
+        {
+            "word": "copper snake",
+            "score": 100
+        },
+        {
+            "word": "Lepidosauria",
+            "score": 0
+        },
+        {
+            "word": "cribo",
+            "score": 0
+        },
+        {
+            "word": "Boigidae",
+            "score": 100
+        },
+        {
+            "word": "Oxybelis",
+            "score": 100
+        },
+        {
+            "word": "Dasypeltidae",
+            "score": 100
+        },
+        {
+            "word": "red–bellied snake",
+            "score": 100
+        },
+        {
+            "word": "Jacobson's organ",
+            "score": 0
+        },
+        {
+            "word": "rainbow snake",
+            "score": 100
+        },
+        {
+            "word": "Palaeophis",
+            "score": 100
+        },
+        {
+            "word": "grope",
+            "score": 0
+        },
+        {
+            "word": "black racer",
+            "score": 0
+        },
+        {
+            "word": "cloacal gland",
+            "score": 0
+        },
+        {
+            "word": "Opisthoglypha",
+            "score": 100
+        },
+        {
+            "word": "slough",
+            "score": 0
+        },
+        {
+            "word": "lizard",
+            "score": 0
+        },
+        {
+            "word": "herpetologist",
+            "score": 0
+        },
+        {
+            "word": "bull snake",
+            "score": 100
+        },
+        {
+            "word": "hoop snake",
+            "score": 0
+        },
+        {
+            "word": "terrify",
+            "score": 0
+        },
+        {
+            "word": "Pythonidae",
+            "score": 100
+        },
+        {
+            "word": "Lacertilia",
+            "score": 0
+        },
+        {
+            "word": "snake eel",
+            "score": 100
+        },
+        {
+            "word": "pounce",
+            "score": 0
+        },
+        {
+            "word": "molt",
+            "score": 0
+        },
+        {
+            "word": "sinuous",
+            "score": 0
+        },
+        {
+            "word": "phobic",
+            "score": 0
+        },
+        {
+            "word": "lissome",
+            "score": 0
+        },
+        {
+            "word": "scarlet king snake",
+            "score": 100
+        },
+        {
+            "word": "creep",
+            "score": 0
+        }
+    ]
+}
