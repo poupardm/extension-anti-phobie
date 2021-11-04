@@ -19,7 +19,7 @@ blacklist = [
 ]
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app)
 
 def is_downloadable(url, link):
     if ".svg" not in url:
@@ -114,7 +114,7 @@ def hello():
                         back = back.parent
                     avant = i.parent
                     # Tant qu'un mot déterminant à 100% la phobie n'est pas trouvé et que le corps à un parent
-                    while(ok == False and count_parent < max_parent/2):
+                    while(ok == False and count_parent < max_parent/4):
                         count_parent = count_parent + 1
                         for texte in avant.find_all(text=True):
                             # Si le text est non-vide
