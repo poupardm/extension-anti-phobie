@@ -40,6 +40,9 @@
   "reptText": {
     "message": "Herpétophobie (peur des reptiles)"
   },
+  "clownText": {
+    "message": "Coulrophobie (peur des clowns)"
+  },
   "mainMenu": {
     "message": "Général"
   },

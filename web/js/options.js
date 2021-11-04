@@ -93,9 +93,10 @@ function loadSelectedMenu(locationHash) {
             document.querySelector("#typeOfPhobiaText").innerHTML = chrome.i18n.getMessage("typeOfPhobiaText");
             document.querySelector("#araText").innerHTML = chrome.i18n.getMessage("araText");
             document.querySelector("#reptText").innerHTML = chrome.i18n.getMessage("reptText");
+            document.querySelector("#clownText").innerHTML = chrome.i18n.getMessage("clownText");
 
             // Get state of the extension switch
-            chrome.storage.sync.get('enable', function(data) {
+            chrome.storage.local.get('enable', function(data) {
                 document.querySelector("#extensionButton").checked = data.enable
                 // Set the text of the extension button
                 let extensionButtonText = document.getElementById("extensionButtonText");
@@ -104,13 +105,18 @@ function loadSelectedMenu(locationHash) {
             });
 
             // Set state of the arachnophobia checkbox
-            chrome.storage.sync.get('araCheckbox', function(data) {
+            chrome.storage.local.get('araCheckbox', function(data) {
                 document.querySelector("#araCheckbox").checked = data.araCheckbox
             });
 
             // Set state of the reptile phobia checkbox
-            chrome.storage.sync.get('reptCheckbox', function(data) {
+            chrome.storage.local.get('reptCheckbox', function(data) {
                 document.querySelector("#reptCheckbox").checked = data.reptCheckbox
+            });
+
+            // Set state of the reptile phobia checkbox
+            chrome.storage.local.get('clownCheckbox', function(data) {
+                document.querySelector("#clownCheckbox").checked = data.clownCheckbox
             });
             break;
     }
@@ -277,7 +283,7 @@ extensionButton.addEventListener("click", function () {
     if(extensionButton.checked) extensionButtonText.innerText = chrome.i18n.getMessage("disableExtText");
 
     // Save the state of the switch
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         enable: document.querySelector("#extensionButton").checked
     });
 });
@@ -286,8 +292,9 @@ extensionButton.addEventListener("click", function () {
 var saveButton = document.getElementById("saveButton");
 saveButton.addEventListener("click", function () {
     // Save the states of the phobia checkbox
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         araCheckbox: document.querySelector('#araCheckbox').checked,
-        reptCheckbox: document.querySelector('#reptCheckbox').checked
+        reptCheckbox: document.querySelector('#reptCheckbox').checked,
+        clownCheckbox: document.querySelector('#clownCheckbox').checked
     });
 });

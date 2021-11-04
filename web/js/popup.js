@@ -11,7 +11,7 @@ const extensionButton = document.getElementById("extensionButton");
  **/
 window.addEventListener("load", function () {
     // Obtenir l'état de l'extension (activée/désactivée)
-    chrome.storage.sync.get('enable', function(data) {
+    chrome.storage.local.get('enable', function(data) {
         // Activation ou non du switch button en fonction de l'état stocké
         document.querySelector("#extensionButton").checked = data.enable
         // Chargement du texte du bouton à partir du dossier _locales
@@ -76,7 +76,7 @@ function isWhitelisted(whitelist, currentTabUrl) {
  **/
 function formatURL(url) {
     // regex pattern permettant de transformer l'url en paramètre
-    return url.replace(/(^\w+:|^)\/\//, 'www.').replace(/\/+[a-zA-Z]+.*/, '');
+    return url.replace(/(^\w+:|^)\/\//, '').replace(/\/+[a-zA-Z]+.*/, '');
 }
 
 
@@ -188,7 +188,7 @@ extensionButton.addEventListener("click", function () {
     }
 
     // Sauvergarde de l'état
-    chrome.storage.sync.set({
+    chrome.storage.local.set({
         enable: document.querySelector("#extensionButton").checked
     });
 });

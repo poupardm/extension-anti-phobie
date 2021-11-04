@@ -12,10 +12,14 @@
       "http://*/*",
       "https://*/*"
     ],
-    "js": [ "js/contentScript.js" ],
+    "js": [ "js/contentScript.js", "js/jquery-3.6.0.js" ],
     "css": [ "css/hideImages.css"],
     "all_frames": true
   } ],
+  "web_accessible_resources": [{
+    "resources": ["dico/*.json"],
+    "matches": ["<all_urls>"]
+  }],
   "permissions": ["tabs","storage", "activeTab", "scripting","webNavigation", "contextMenus"],
   "action": {
     "default_popup": "popup.html",
